@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yichen.project.mapper.TodoMapper">
+
+    <resultMap id="BaseResultMap" type="com.yichen.project.model.entity.Todo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="score" column="score" jdbcType="BIGINT"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="type" column="type" jdbcType="TINYINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="deadline" column="deadline" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,score,updateTime,
+        createTime,isDelete,type,
+        content,deadline
+    </sql>
+</mapper>
